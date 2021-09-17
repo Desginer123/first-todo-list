@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  @@include('components/_header.html')
+  <!-- WRITE CODE HERE -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<h1>To do List</h1>
+
+<div class="list">
+  <form action="" id="submit_task">
+    <input id="task_name" placeholder="Имя задачи" type="text">
+    <button id="save_task" type="submit">добавить</button>
+  </form>
+  <ul id="task_list">
+  </ul>
+</div>
+  <!-- STOP WRITE CODE -->
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+</html>

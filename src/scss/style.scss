@@ -1,0 +1,144 @@
+@import 'vars';
+@import 'fonts';
+@import 'global';
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    START CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+
+$color-background: #41ADA5;
+$color-gris: #c1c2c3;
+$color-rojo: #e42355;
+$color-verde: #249991;
+
+
+html,body {
+  height: 100%;
+  text-align:center;
+  background-color: $color-background;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+  color:#fff;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 1em 0 .5em;
+}
+
+p {
+    max-width: 80%;
+    margin: 1.5em auto;
+    line-height: 1.5em;
+    padding-bottom: 2em;
+}
+
+.list {
+  background-color: #fff;
+  width:350px;
+  display: inline-block;
+}
+
+.list h3 {
+  color:#fff;
+  background-color:#6CC9C2;
+  margin:1em 0 0 0;
+  padding:0.8em 0;
+  font-weight: 200;
+}
+
+span {
+    display: inline-block;
+    color: #c1c2c3;
+    -webkit-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+    transition: .5s ease-out;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+ul {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul li {
+  list-style-type:none;
+  text-align:left;
+  padding:5% 0%;
+}
+
+input[type='checkbox'] + .pure-toggle {
+  display: inline-block;
+  color:$color-gris;
+  transition:all 0.5s ease-out;
+  cursor: pointer;
+  font-weight: 200;
+  &:hover {
+    color:$color-rojo;
+  }
+  i{
+    width:30px;
+  }
+  span {
+    margin-left:10px;
+    vertical-align:super;
+  }
+}
+
+
+input[type='checkbox']:checked + .pure-toggle {
+  color:$color-verde;
+  i {
+    transition:all 0.5s ease-out;
+    transform: rotate(360deg);
+    &:before {
+    content: "\f00c";
+    }
+  }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form input {
+    border: 1px solid #249991;
+    outline: none;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 12px
+}
+
+form button {
+    border-radius: 4px;
+    border-color: #249991;
+    outline: none;
+    border: 1px solid;
+    background-color: transparent
+}
+
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    END CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+@import 'media';
+@import 'promo';
+
