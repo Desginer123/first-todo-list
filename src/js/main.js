@@ -1,6 +1,8 @@
+
 let form = document.getElementById('submit_task'),
 	input = document.getElementById('task_name'),
-	btn = document.getElementById('save_task');
+	btn = document.getElementById('save_task'),
+	resetBtn = document.getElementById('resetList');
 
 
 
@@ -39,13 +41,21 @@ btn.addEventListener('click', function(e){
 	}
 
 })
+resetBtn.addEventListener('click', function(e) {
+	e.preventDefault();
+	localStorage.removeItem('key');
+	location.reload()
+})
 let returnObj = JSON.parse(localStorage.getItem('key'));
-returnObj.forEach(function(element) {
-	let lastTaskS = document.createElement(
-		`span`
-	)
-	lastTaskS.innerHTML = element.task_name
-	let task_ulS = document.getElementById('task_list')
-	task_ulS.appendChild(lastTaskS)
-}  )
+if(returnObj) {
+	returnObj.forEach(function(element) {
+		let lastTaskS = document.createElement(
+			`span`
+		)
+		lastTaskS.innerHTML = element.task_name
+		let task_ulS = document.getElementById('task_list')
+		task_ulS.appendChild(lastTaskS)
+	}  )
+}
+
 
